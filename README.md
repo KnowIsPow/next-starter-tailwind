@@ -3,7 +3,7 @@
 Run the following command to create a new project with this Starter:
 
 ```
-yarn create next-app [project-name] -e https://github.com/KnowIsPow/next-starter-tailwind.git
+yarn create next-app [project-name] -e https://github.com/KnowIsPow/next-starter-tailwind
 # or
-npx create-next-app [project-name] -e https://github.com/KnowIsPow/next-starter-tailwind.git
+npx create-next-app [project-name] -e https://github.com/KnowIsPow/next-starter-tailwind
 

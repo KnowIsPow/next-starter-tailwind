@@ -1,3 +1,3 @@
-export default function Section({ children }) {
-  return <section>{children}</section>;
+export default function Section({ children, ...rest }) {
+  return <section {...rest}>{children}</section>;
 }

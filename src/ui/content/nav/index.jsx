@@ -1,3 +1,3 @@
-export default function Nav({ children }) {
-  return <nav>{children}</nav>;
+export default function Nav({ children, ...rest }) {
+  return <nav {...rest}>{children}</nav>;
 }

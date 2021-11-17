@@ -1,7 +1,9 @@
+import { isRequired } from 'functions/error-handling/required-props';
+
 export default function Select({
   className,
-  options,
-  selectedOption,
+  options = isRequired('Select', 'options'),
+  selectedOption = isRequired('Select', 'selectedOption'),
   onChange = () => {},
   renderOption = (option) => option,
   renderKey = (option) => option,

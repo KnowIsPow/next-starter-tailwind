@@ -6,7 +6,6 @@ export default function PhoneNumberInput({ type = 'tel', autoComplete = 'tel', v
       type={type}
       autoComplete={autoComplete}
       value={formatToPhone(value)}
-      type="tel"
       maxLength="10"
       {...rest}
     />

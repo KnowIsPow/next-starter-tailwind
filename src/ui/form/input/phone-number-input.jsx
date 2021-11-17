@@ -1,6 +1,11 @@
 import NumberInput from 'ui/form/input/number-input';
 
-export default function PhoneNumberInput({ type = 'tel', autoComplete = 'tel', value, ...rest }) {
+export default function PhoneNumberInput({
+  type = 'tel',
+  autoComplete = 'tel',
+  value = '',
+  ...rest
+}) {
   return (
     <NumberInput
       type={type}

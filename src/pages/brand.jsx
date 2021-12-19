@@ -4,6 +4,7 @@ import Button from 'ui/form/button';
 import TextInput from 'ui/form/input';
 import NumberInput from 'ui/form/input/number-input';
 import PhoneNumberInput from 'ui/form/input/phone-number-input';
+import Image from 'ui/image';
 
 export const colors = [
   { name: 'Primary Color', color: 'bg-primary', lightContent: true },
@@ -31,16 +32,16 @@ export default function BrandPage({}) {
     <Page title="Brand" description="Page Branding" canonical="/brand">
       <main className="content text-gray-300">
         <section className="flex flex-col items-center space-y-8 border-b py-12">
-          <img src="/vercel.svg" className="p-8 bg-gray-50" />
+          <Image alt="Primary Logo" src="/vercel.svg" className="p-8 bg-gray-50" />
           <h2>Primary Logo</h2>
         </section>
         <section className="py-12 flex divide-x border-b">
           <div className="flex-1 flex flex-col items-center space-y-4 px-2 py-8">
-            <img src="/vercel-white.svg" className="p-6 bg-black" />
+            <Image alt="Primary Logo Variation" src="/vercel-white.svg" className="p-6 bg-black" />
             <h2>Logo Variation</h2>
           </div>
           <div className="flex-1 flex flex-col items-center space-y-4 py-8">
-            <img src="/favicon.ico" className="p-8" />
+            <Image alt="Primary Logo Submark" src="/favicon.ico" className="p-8" />
             <h2>Submark</h2>
           </div>
         </section>
@@ -60,7 +61,8 @@ export default function BrandPage({}) {
           <div className="flex justify-center flex-wrap gap-4">
             {colors.map((color) => {
               return (
-                <img
+                <Image
+                  alt="Primary Logo With Color Background"
                   key={color.color}
                   src={color.lightContent ? '/vercel-white.svg' : '/vercel.svg'}
                   className={`p-8 ${color.color}`}

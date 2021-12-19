@@ -1,5 +1,6 @@
 import Page from 'features/page';
 import { useState } from 'react';
+import Button from 'ui/form/button';
 import TextInput from 'ui/form/input';
 import NumberInput from 'ui/form/input/number-input';
 import PhoneNumberInput from 'ui/form/input/phone-number-input';
@@ -84,8 +85,8 @@ export default function BrandPage({}) {
         </section>
         <section className="py-12 text-gray-700 border-b">
           <div className="mb-8 display text-gray-400 text-xl">Components</div>
-          <button className="btn btn-primary">Primary Button</button>
-          <button className="btn btn-secondary ml-2">Secondary Button</button>
+          <Button>Primary Button</Button>
+          <Button className="btn-secondary ml-2">Secondary Button</Button>
 
           <div className="grid grid-cols-3 gap-x-4 mt-8">
             <TextInput

@@ -1,4 +1,5 @@
 import Page from 'features/page';
+import Button from 'ui/form/button';
 import InternalLink from 'ui/link/internal';
 
 export default function IndexPage() {
@@ -58,7 +59,7 @@ export default function IndexPage() {
                 that promote building a cohesive brand.
               </p>
               <InternalLink href="/brand">
-                <button className="btn btn-secondary mt-4">View Branding</button>
+                <Button className="btn-secondary mt-4">View Branding</Button>
               </InternalLink>
             </div>
           </div>

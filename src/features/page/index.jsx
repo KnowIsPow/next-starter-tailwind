@@ -1,7 +1,5 @@
+import { siteName, socialProfiles } from 'site_configuration';
 import Head from 'next/head';
-
-const siteName = 'Next Tailwind Starter';
-const twitterHandle = '';
 
 export default function Page({
   children,
@@ -24,8 +22,10 @@ export default function Page({
         {noIndex && <meta name="robots" content="noindex" />}
 
         {/* Twitter */}
-        {twitterHandle && <meta name="twitter:card" content="summary" key="twcard" />}
-        {twitterHandle && <meta name="twitter:creator" content={twitterHandle} key="twhandle" />}
+        {socialProfiles.twitter && <meta name="twitter:card" content="summary" key="twcard" />}
+        {socialProfiles.twitter && (
+          <meta name="twitter:creator" content={socialProfiles.twitter} key="twhandle" />
+        )}
 
         {/* Open Graph */}
         {canonical && (

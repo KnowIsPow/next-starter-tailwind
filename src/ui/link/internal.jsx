@@ -1,6 +1,6 @@
 import NextLink from 'next/link';
 
-export default function Link({
+export default function InternalLink({
   href,
   as,
   prefetch,

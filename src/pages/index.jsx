@@ -1,5 +1,5 @@
 import Page from 'features/page';
-import Link from 'ui/link';
+import InternalLink from 'ui/link/internal';
 
 export default function IndexPage() {
   return (
@@ -57,9 +57,9 @@ export default function IndexPage() {
                 Styled components provided in styles.css serve to provide a set of basic components
                 that promote building a cohesive brand.
               </p>
-              <Link href="/brand">
+              <InternalLink href="/brand">
                 <button className="btn btn-secondary mt-4">View Branding</button>
-              </Link>
+              </InternalLink>
             </div>
           </div>
           <div>

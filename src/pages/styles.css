@@ -47,7 +47,7 @@
 
   /* Input */
   .input {
-    @apply inline-flex items-center w-full px-4 py-2 text-sm font-medium transition duration-200 bg-white border border-gray-300 rounded-sm shadow-sm hover:bg-gray-50 focus:ring-primary focus:border-alt2;
+    @apply inline-flex items-center w-full px-4 py-2 text-sm font-medium transition duration-200 bg-white border border-gray-300 rounded-sm shadow-sm hover:bg-gray-50 focus:ring-primary focus:border-primary;
   }
 
   /* Buttons */

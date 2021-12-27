@@ -12,7 +12,7 @@ export default function TextInput({
   return (
     <div className="relative rounded-sm shadow-sm">
       {leftIcon && (
-        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+        <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
           {leftIcon}
         </div>
       )}
@@ -24,7 +24,7 @@ export default function TextInput({
         {...rest}
       />
       {rightIcon && (
-        <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+        <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
           {rightIcon}
         </div>
       )}

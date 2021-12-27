@@ -30,26 +30,26 @@ export default function BrandPage({}) {
 
   return (
     <Page title="Brand" description="Page Branding" canonical="/brand">
-      <main className="content text-gray-300">
-        <section className="flex flex-col items-center space-y-8 border-b py-12">
+      <main className="text-gray-300 content">
+        <section className="flex flex-col items-center py-12 border-b space-y-8">
           <Image alt="Primary Logo" src="/vercel.svg" className="p-8 bg-gray-50" />
           <h2>Primary Logo</h2>
         </section>
-        <section className="py-12 flex divide-x border-b">
-          <div className="flex-1 flex flex-col items-center space-y-4 px-2 py-8">
+        <section className="flex py-12 border-b divide-x">
+          <div className="flex flex-col items-center flex-1 px-2 py-8 space-y-4">
             <Image alt="Primary Logo Variation" src="/vercel-white.svg" className="p-6 bg-black" />
             <h2>Logo Variation</h2>
           </div>
-          <div className="flex-1 flex flex-col items-center space-y-4 py-8">
+          <div className="flex flex-col items-center flex-1 py-8 space-y-4">
             <Image alt="Primary Logo Submark" src="/favicon.ico" className="p-8" />
             <h2>Submark</h2>
           </div>
         </section>
         <section className="py-12 border-b">
-          <div className="flex justify-evenly flex-wrap gap-12">
+          <div className="flex flex-wrap justify-evenly gap-12">
             {colors.map((color) => {
               return (
-                <div key={color.color} className="space-y-8 text-center flex flex-col items-center">
+                <div key={color.color} className="flex flex-col items-center text-center space-y-8">
                   <h2 className="text-sm text-gray-400">{color.name}</h2>
                   <div className={`h-28 w-28 rounded-full ${color.color}`}></div>
                 </div>
@@ -58,7 +58,7 @@ export default function BrandPage({}) {
           </div>
         </section>
         <section className="py-12 border-b">
-          <div className="flex justify-center flex-wrap gap-4">
+          <div className="flex flex-wrap justify-center gap-4">
             {colors.map((color) => {
               return (
                 <Image
@@ -72,7 +72,7 @@ export default function BrandPage({}) {
           </div>
         </section>
         <section className="py-12 text-gray-700 border-b">
-          <div className="mb-8 display text-gray-400 text-xl">Typography</div>
+          <div className="mb-8 text-xl text-gray-400 display">Typography</div>
           <h2 className="text-gray-800">{alphabet}</h2>
           <h2 className="mb-8 text-gray-800 lowercase">{alphabet}</h2>
 
@@ -86,16 +86,16 @@ export default function BrandPage({}) {
           })}
         </section>
         <section className="py-12 text-gray-700 border-b">
-          <div className="mb-8 display text-gray-400 text-xl">Components</div>
+          <div className="mb-8 text-xl text-gray-400 display">Components</div>
           <Button>Primary Button</Button>
-          <Button className="btn-secondary ml-2">Secondary Button</Button>
+          <Button className="ml-2 btn-secondary">Secondary Button</Button>
 
-          <div className="grid grid-cols-3 gap-x-4 mt-8">
+          <div className="mt-8 grid grid-cols-3 gap-x-4">
             <TextInput
               leftIcon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-accent"
+                  className="w-6 h-6 text-accent"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -116,7 +116,7 @@ export default function BrandPage({}) {
               leftIcon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-accent"
+                  className="w-6 h-6 text-accent"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -137,7 +137,7 @@ export default function BrandPage({}) {
               leftIcon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-accent"
+                  className="w-6 h-6 text-accent"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"

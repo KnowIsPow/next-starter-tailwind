@@ -9,8 +9,8 @@ export default function IndexPage() {
       description="An opinionated starter kit for Next.js and TailwindCSS"
       canonical="/"
     >
-      <main className="space-y-10 py-12 md:py-24 bg-gray-50">
-        <div className="content pb-8 border-b">
+      <main className="py-12 space-y-10 md:py-24 bg-gray-50">
+        <div className="pb-8 border-b content">
           <h1>Next.js + TailwindCSS Starter Kit</h1>
           <p className="mt-2">
             An opinionated boilerplate for working with Next.js and TailwindCSS. The purpose of this
@@ -20,7 +20,7 @@ export default function IndexPage() {
         </div>
         <section className="content space-y-6">
           <div>
-            <div className="shadow-sm p-4 bg-white">
+            <div className="p-4 bg-white shadow-sm">
               <h2>Folder Structure</h2>
               <p className="mt-2">
                 All files are moved into the ./src folder. Additional folders included:
@@ -46,25 +46,25 @@ export default function IndexPage() {
             </div>
           </div>
           <div>
-            <div className="shadow-sm p-4 bg-white">
+            <div className="p-4 bg-white shadow-sm">
               <h2>Naming Convention</h2>
               <p className="mt-2">All files are named in lowercase-kebab-case. </p>
             </div>
           </div>
           <div>
-            <div className="shadow-sm p-4 bg-white">
+            <div className="p-4 bg-white shadow-sm">
               <h2>TailwindCSS Components</h2>
               <p className="mt-2">
                 Styled components provided in styles.css serve to provide a set of basic components
                 that promote building a cohesive brand.
               </p>
               <InternalLink href="/brand">
-                <Button className="btn-secondary mt-4">View Branding</Button>
+                <Button className="mt-4 btn-secondary">View Branding</Button>
               </InternalLink>
             </div>
           </div>
           <div>
-            <div className="shadow-sm p-4 bg-white">
+            <div className="p-4 bg-white shadow-sm">
               <h2>React Components</h2>
               <p className="mt-2">
                 React components are added as a need is recognized to reduce development around

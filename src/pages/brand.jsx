@@ -1,5 +1,6 @@
 import Page from 'features/page';
 import { useState } from 'react';
+import { siteLogo, siteLogoAlt, siteLogoSubmark } from 'site_configuration';
 import Button from 'ui/form/button';
 import TextInput from 'ui/form/input';
 import NumberInput from 'ui/form/input/number-input';
@@ -31,25 +32,25 @@ export default function BrandPage({}) {
   return (
     <Page title="Brand" description="Page Branding" canonical="/brand">
       <main className="text-gray-300 content">
-        <section className="flex flex-col items-center py-12 border-b space-y-8">
-          <Image alt="Primary Logo" src="/vercel.svg" className="p-8 bg-gray-50" />
+        <section className="flex flex-col items-center py-12 space-y-8 border-b">
+          <Image alt="Primary Logo" src={siteLogo.src} className="p-8 bg-gray-50" />
           <h2>Primary Logo</h2>
         </section>
         <section className="flex py-12 border-b divide-x">
           <div className="flex flex-col items-center flex-1 px-2 py-8 space-y-4">
-            <Image alt="Primary Logo Variation" src="/vercel-white.svg" className="p-6 bg-black" />
+            <Image alt="Primary Logo Variation" src={siteLogoAlt.src} className="p-6 bg-black" />
             <h2>Logo Variation</h2>
           </div>
           <div className="flex flex-col items-center flex-1 py-8 space-y-4">
-            <Image alt="Primary Logo Submark" src="/favicon.ico" className="p-8" />
+            <Image alt="Primary Logo Submark" src={siteLogoSubmark.src} className="p-8" />
             <h2>Submark</h2>
           </div>
         </section>
         <section className="py-12 border-b">
-          <div className="flex flex-wrap justify-evenly gap-12">
+          <div className="flex flex-wrap gap-12 justify-evenly">
             {colors.map((color) => {
               return (
-                <div key={color.color} className="flex flex-col items-center text-center space-y-8">
+                <div key={color.color} className="flex flex-col items-center space-y-8 text-center">
                   <h2 className="text-sm text-gray-400">{color.name}</h2>
                   <div className={`h-28 w-28 rounded-full ${color.color}`}></div>
                 </div>
@@ -64,7 +65,7 @@ export default function BrandPage({}) {
                 <Image
                   alt="Primary Logo With Color Background"
                   key={color.color}
-                  src={color.lightContent ? '/vercel-white.svg' : '/vercel.svg'}
+                  src={color.lightContent ? siteLogoAlt.src : siteLogo.src}
                   className={`p-8 ${color.color}`}
                 />
               );
@@ -90,7 +91,7 @@ export default function BrandPage({}) {
           <Button>Primary Button</Button>
           <Button className="ml-2 btn-secondary">Secondary Button</Button>
 
-          <div className="mt-8 grid grid-cols-3 gap-x-4">
+          <div className="grid grid-cols-3 mt-8 gap-x-4">
             <TextInput
               leftIcon={
                 <svg

@@ -1,8 +1,8 @@
-export default function LinkExternal({
+export default function ExternalLink({
   children,
   href,
-  openNewTab = false,
-  rel = 'nofollow',
+  openNewTab = true,
+  rel = 'noopener noreferrer nofollow',
   ...rest
 }) {
   return (

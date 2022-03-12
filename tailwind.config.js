@@ -1,7 +1,6 @@
 module.exports = {
-  mode: 'jit',
-  purge: ['./src/pages/**/*.{js,jsx}', './src/ui/**/*.{js,jsx}', './src/features/**/*.{js,jsx}'],
-  darkMode: false, // or 'media' or 'class'
+  content: ['./src/pages/**/*.{js,jsx}', './src/ui/**/*.{js,jsx}', './src/features/**/*.{js,jsx}'],
+  darkMode: 'media', // 'media' or 'class'
   theme: {
     extend: {
       colors: {
@@ -11,8 +10,5 @@ module.exports = {
         alt2: '#164487',
       },
     },
-  },
-  variants: {
-    extend: {},
   },
 };

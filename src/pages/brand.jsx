@@ -5,6 +5,7 @@ import Button from 'ui/form/button';
 import TextInput from 'ui/form/input';
 import NumberInput from 'ui/form/input/number-input';
 import PhoneNumberInput from 'ui/form/input/phone-number-input';
+import TextAreaInput from 'ui/form/input/text-area-input';
 import Image from 'ui/image';
 
 export const colors = [
@@ -13,7 +14,7 @@ export const colors = [
   { name: 'Black', color: 'bg-black', lightContent: true },
   { name: 'White', color: 'bg-white border border-2', lightContent: false },
   { name: 'Alternative 1', color: 'bg-alt1', lightContent: true },
-  { name: 'Alternative 2', color: 'bg-alt2', lightContent: true },
+  { name: 'Alternative 2', color: 'bg-alt2', lightContent: true }
 ];
 
 const alphabet = 'abcdefghijklmnopqrstuvwxyz';
@@ -26,6 +27,7 @@ mollit anim id est laborum.`;
 
 export default function BrandPage({}) {
   const [text, setText] = useState();
+  const [longText, setLongText] = useState();
   const [number, setNumber] = useState();
   const [phone, setPhone] = useState();
 
@@ -33,16 +35,28 @@ export default function BrandPage({}) {
     <Page title="Brand" description="Page Branding" canonical="/brand">
       <main className="text-gray-300 content">
         <section className="flex flex-col items-center py-12 space-y-8 border-b">
-          <Image alt="Primary Logo" src={siteLogo.src} className="p-8 bg-gray-50" />
+          <Image
+            alt="Primary Logo"
+            src={siteLogo.src}
+            className="p-8 bg-gray-50"
+          />
           <h2>Primary Logo</h2>
         </section>
         <section className="flex py-12 border-b divide-x">
           <div className="flex flex-col items-center flex-1 px-2 py-8 space-y-4">
-            <Image alt="Primary Logo Variation" src={siteLogoAlt.src} className="p-6 bg-black" />
+            <Image
+              alt="Primary Logo Variation"
+              src={siteLogoAlt.src}
+              className="p-6 bg-black"
+            />
             <h2>Logo Variation</h2>
           </div>
           <div className="flex flex-col items-center flex-1 py-8 space-y-4">
-            <Image alt="Primary Logo Submark" src={siteLogoSubmark.src} className="p-8" />
+            <Image
+              alt="Primary Logo Submark"
+              src={siteLogoSubmark.src}
+              className="p-8"
+            />
             <h2>Submark</h2>
           </div>
         </section>
@@ -50,9 +64,14 @@ export default function BrandPage({}) {
           <div className="flex flex-wrap gap-12 justify-evenly">
             {colors.map((color) => {
               return (
-                <div key={color.color} className="flex flex-col items-center space-y-8 text-center">
+                <div
+                  key={color.color}
+                  className="flex flex-col items-center space-y-8 text-center"
+                >
                   <h2 className="text-sm text-gray-400">{color.name}</h2>
-                  <div className={`h-28 w-28 rounded-full ${color.color}`}></div>
+                  <div
+                    className={`h-28 w-28 rounded-full ${color.color}`}
+                  ></div>
                 </div>
               );
             })}
@@ -91,7 +110,7 @@ export default function BrandPage({}) {
           <Button>Primary Button</Button>
           <Button className="ml-2 btn-secondary">Secondary Button</Button>
 
-          <div className="grid grid-cols-3 mt-8 gap-x-4">
+          <div className="grid grid-cols-3 mt-8 gap-x-4 gap-y-3">
             <TextInput
               leftIcon={
                 <svg
@@ -154,6 +173,30 @@ export default function BrandPage({}) {
               placeholder="Phone Input"
               onChange={(val) => setPhone(val)}
               value={phone}
+            />
+            <TextAreaInput
+              leftIcon={
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6 text-accent"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  />
+                </svg>
+              }
+              placeholder="Text Area Input"
+              onChange={(val) => setLongText(val)}
+              value={longText}
+              allowHorizontalResize={true}
+              allowVerticalResize={false}
+              allowScroll={true}
             />
           </div>
         </section>

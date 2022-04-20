@@ -10,7 +10,7 @@ export default function TextInput({
   ...rest
 }) {
   return (
-    <div className="relative rounded-sm shadow-sm">
+    <div className="relative">
       {leftIcon && (
         <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
           {leftIcon}

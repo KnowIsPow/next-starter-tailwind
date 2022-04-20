@@ -13,9 +13,9 @@ export default function TextAreaInput({
   ...rest
 }) {
   return (
-    <div className="relative rounded-sm shadow-sm">
+    <div className="relative">
       {leftIcon && (
-        <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+        <div className="absolute inset-y-0 left-0 flex items-start pt-2 pl-3 pointer-events-none">
           {leftIcon}
         </div>
       )}
@@ -36,9 +36,9 @@ export default function TextAreaInput({
         ${allowScroll ? 'overflow-auto' : 'overflow-clip'}
         ${className}`}
         {...rest}
-      ></textarea>
+      />
       {rightIcon && (
-        <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+        <div className="absolute inset-y-0 right-0 flex items-start pt-2 pr-3 pointer-events-none">
           {rightIcon}
         </div>
       )}

@@ -39,3 +39,7 @@ Styled components provided in styles.css serve to provide a set of basic compone
 ## REACT COMPONENTS
 
 React components are added as a need is recognized to reduce development around commonly recurring component patterns.
+
+## SERVER HEADERS
+
+This codebase makes use of Google Tag Manager for tracking page views and custom events. If you would like to utilize Google Tag Manager alongside a Content Security Policy header, please [refer to the following article](https://developers.google.com/tag-platform/tag-manager/web/csp) from Google.

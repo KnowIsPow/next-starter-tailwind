@@ -18,9 +18,9 @@ export default function IndexPage() {
             new Next.js + TailwindCSS projects.
           </p>
         </div>
-        <section className="content space-y-6">
+        <section className="space-y-6 content">
           <div>
-            <div className="p-4 bg-white shadow-sm">
+            <div className="p-4 bg-white stylize">
               <h2>Folder Structure</h2>
               <p className="mt-2">
                 All files are moved into the ./src folder. Additional folders included:
@@ -46,13 +46,13 @@ export default function IndexPage() {
             </div>
           </div>
           <div>
-            <div className="p-4 bg-white shadow-sm">
+            <div className="p-4 bg-white stylize">
               <h2>Naming Convention</h2>
               <p className="mt-2">All files are named in lowercase-kebab-case. </p>
             </div>
           </div>
           <div>
-            <div className="p-4 bg-white shadow-sm">
+            <div className="p-4 bg-white stylize">
               <h2>TailwindCSS Components</h2>
               <p className="mt-2">
                 Styled components provided in styles.css serve to provide a set of basic components
@@ -64,7 +64,7 @@ export default function IndexPage() {
             </div>
           </div>
           <div>
-            <div className="p-4 bg-white shadow-sm">
+            <div className="p-4 bg-white stylize">
               <h2>React Components</h2>
               <p className="mt-2">
                 React components are added as a need is recognized to reduce development around

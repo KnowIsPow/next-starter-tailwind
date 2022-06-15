@@ -8,6 +8,7 @@ export default function Page({
   canonical = '',
   previewImage = '',
   noIndex = false,
+  isArticle = false,
 }) {
   return (
     <>
@@ -28,6 +29,7 @@ export default function Page({
         )}
 
         {/* Open Graph */}
+        {title && <meta property="og:title" content={title} key="ogtitle" />}
         {canonical && (
           <meta
             property="og:url"
@@ -37,8 +39,8 @@ export default function Page({
         )}
         {previewImage && <meta property="og:image" content={previewImage} key="ogimage" />}
         {siteName && <meta property="og:site_name" content={siteName} key="ogsitename" />}
-        {title && <meta property="og:title" content={title} key="ogtitle" />}
         {description && <meta property="og:description" content={description} key="ogdesc" />}
+        <meta property="og:type" content={isArticle ? 'article' : 'website'} key="ogtype" />
       </Head>
       {children}
     </>

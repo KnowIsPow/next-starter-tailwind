@@ -24,7 +24,7 @@ export default function Page({
         {/* Twitter */}
         {socialProfiles.twitter && <meta name="twitter:card" content="summary" key="twcard" />}
         {socialProfiles.twitter && (
-          <meta name="twitter:creator" content={socialProfiles.twitter} key="twhandle" />
+          <meta name="twitter:site" content={socialProfiles.twitter} key="twhandle" />
         )}
 
         {/* Open Graph */}
